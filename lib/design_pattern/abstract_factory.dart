@@ -27,7 +27,7 @@ class WindowUIFactory extends PlatformUIFactory {
 
   @override
   CheckBox createCheckBox() {
-    return createCheckBox();
+    return WindowCheckBox();
   }
 }
 
