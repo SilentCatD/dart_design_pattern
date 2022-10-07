@@ -74,7 +74,3 @@ void main() {
   source.writeData(data);
   print(source.readData());
 }
-
-class A {}
-
-class B {}
