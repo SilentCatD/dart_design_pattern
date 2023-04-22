@@ -16,8 +16,12 @@ Storage createStorage(LocationType type) {
   }
 }
 
+LocationType getLocationType() {
+  return LocationType.sea;
+}
+
 void main() {
-  final locationType = LocationType.sea;
+  final locationType = getLocationType();
   final storage = createStorage(locationType);
   storage.deliver();
 }
