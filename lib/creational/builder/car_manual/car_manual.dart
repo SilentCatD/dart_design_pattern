@@ -1,0 +1,3 @@
+class CarManual {
+  String description = "";
+}
