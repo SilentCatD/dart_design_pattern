@@ -7,11 +7,14 @@ enum GunType {
 
 class BattleUnit extends Robot {
   final GunType gunType;
+  final int _deployer;
 
-  const BattleUnit({required super.type, required this.gunType});
+  const BattleUnit({required super.type, required this.gunType})
+      : _deployer = 1;
 
   BattleUnit.fromSource({required BattleUnit robot})
       : gunType = robot.gunType,
+        _deployer = robot._deployer,
         super.fromSource(robot: robot);
 
   @override
