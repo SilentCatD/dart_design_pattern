@@ -4,15 +4,15 @@ import 'adapters/number_source_class_adapter.dart';
 import 'adapters/number_source_object_adapter.dart';
 
 void main() {
-  final controller = Controller();
-
   // class adapter
   final classNumberGetter = NumberSourceClassAdapter();
-  controller.performOperation(classNumberGetter);
+  final controller = Controller(numberPresenter: classNumberGetter);
+  controller.performOperation();
 
   // object adapter
   final numberSource = NumberSource();
   final objectNumberGetter =
-      NumberSourceObjectAdapter(numberSource: numberSource);
-  controller.performOperation(objectNumberGetter);
+  NumberSourceObjectAdapter(numberSource: numberSource);
+  final controller2 = Controller(numberPresenter: objectNumberGetter);
+  controller2.performOperation();
 }

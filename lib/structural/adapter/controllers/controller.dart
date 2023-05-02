@@ -1,7 +1,9 @@
 import 'number_presenter.dart';
 
 class Controller {
-  void performOperation(NumberPresenter numberPresenter) {
+  final NumberPresenter numberPresenter;
+  const Controller({required this.numberPresenter});
+  void performOperation() {
     final number = numberPresenter.getNumberFormatted();
     print(number);
   }
